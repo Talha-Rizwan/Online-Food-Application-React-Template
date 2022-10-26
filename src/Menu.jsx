@@ -2,9 +2,9 @@ import React from "react";
 import Menu_item from "./components/Menu_item";
 function Menu(){
     return(
-      <div className="flex flex-row">
+      <div className="flex md:flex-row flex-col">
       
-<div className="py-16 font-bold  mx-16 h-full sticky top-1 p-3 space-y-2 w-60 dark:bg-gray-900 dark:text-gray-100 ">
+<div className="py-16 font-bold text-center mx-16 h-full md:sticky top-1 p-3 space-y-2 w-60 dark:bg-gray-900 dark:text-gray-100 ">
 	<div className="flex items-center  space-x-4">
 		<img src="https://source.unsplash.com/100x100/?portrait" alt="" className="w-12 h-12 rounded-full dark:bg-gray-500" />
 		<div>
@@ -87,7 +87,7 @@ function Menu(){
 <section id="Fast_Food" className="py-6 sm:py-12 dark:bg-gray-800 dark:text-gray-100 hover:shadow-2xl">
 	<div className="container p-6 mx-auto space-y-8">
 		<div className="space-y-2 text-center">
-			<h2 className="text-3xl font-bold">Fast Food</h2>
+			<h2 className="text-3xl font-bold border-solid border-4 border-black">Fast Food</h2>
 			<p className="font-serif text-sm dark:text-gray-400">Qualisque erroribus usu at, duo te agam soluta mucius.</p>
 		</div>
 		<div className="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
@@ -121,7 +121,7 @@ function Menu(){
 <section id="Desi_Food" className="py-6 sm:py-12 dark:bg-gray-800 dark:text-gray-100 hover:shadow-2xl">
 	<div className="container p-6 mx-auto space-y-8">
 		<div className="space-y-2 text-center">
-			<h2 className="text-3xl font-bold">Desi Food</h2>
+			<h2 className="text-3xl font-bold border-solid border-4 border-black">Desi Food</h2>
 			<p className="font-serif text-sm dark:text-gray-400">Qualisque erroribus usu at, duo te agam soluta mucius.</p>
 		</div>
 		<div className="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
@@ -159,7 +159,7 @@ function Menu(){
 <section id="Shakes" className="py-6 sm:py-12 dark:bg-gray-800 dark:text-gray-100 hover:shadow-2xl">
 	<div className="container p-6 mx-auto space-y-8">
 		<div className="space-y-2 text-center">
-			<h2 className="text-3xl font-bold">Shakes</h2>
+			<h2 className="text-3xl font-bold border-solid border-4 border-black">Shakes</h2>
 			<p className="font-serif text-sm dark:text-gray-400">Qualisque erroribus usu at, duo te agam soluta mucius.</p>
 		</div>
 		<div className="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
@@ -191,7 +191,7 @@ function Menu(){
 <section id="Tea" className="py-6 sm:py-12 dark:bg-gray-800 dark:text-gray-100 hover:shadow-2xl">
 	<div className="container p-6 mx-auto space-y-8">
 		<div className="space-y-2 text-center">
-			<h2 className="text-3xl font-bold">Tea / Coffee</h2>
+			<h2 className="text-3xl font-bold border-solid border-4 border-black">Tea / Coffee</h2>
 			<p className="font-serif text-sm dark:text-gray-400">Qualisque erroribus usu at, duo te agam soluta mucius.</p>
 		</div>
 		<div className="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-4">

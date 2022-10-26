@@ -1,4 +1,25 @@
+import My_cart from "../My_cart";
+import data from "../data";
+
 function Menu_item(props){
+
+    function add_cart(){
+        let new_data= {item: props.name, quantity: '1', price: props.price}
+
+        data.push({item : props.name, quantity:"1",price : props.price}); 
+
+        console.log(data);
+
+        <My_cart name={props.name} />
+
+
+
+
+    }
+
+
+
+
 return <div>
     <article className="flex flex-col dark:bg-gray-900">
 				<a rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum">
@@ -13,6 +34,7 @@ return <div>
 						<span>PKR {props.price}/-</span>
 					</div>
 				</div>
+                <button onClick={add_cart} className="border-solid border-2 border-black hover:bg-red-200">Add to Cart</button>
 			</article>
 </div>
 }

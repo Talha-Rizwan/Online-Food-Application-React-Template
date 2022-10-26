@@ -1,8 +1,33 @@
-function My_cart(){
+import data from "./data";
+
+
+function My_cart(props){
+
+	let total =0;
+	for(let i=0;i<data.length;i++){
+		total+=parseInt(data[i].price) * parseInt(data[i].quantity)
+	}
+
+
+
     return<div className="flex flex-col max-w-md p-6 space-y-4 divide-y sm:w-96 sm:p-10 divide-gray-700 dark:bg-gray-900 dark:text-gray-100">
 	<h2 className="text-2xl font-semibold">Order items</h2>
 	<ul className="flex flex-col pt-4 space-y-2">
-		<li className="flex items-start justify-between">
+
+	{data.map(i =>{
+		return (<li className="flex items-start justify-between">
+		<h3>
+		{i.item}
+		<span className="text-sm dark:text-violet-400">x{i.quantity}</span>
+		</h3>
+		<h3>
+			{i.price}
+		</h3>
+		
+		</li>)
+
+	})}
+		{/* <li className="flex items-start justify-between">
 			<h3>Hard taco, chicken
 				<span className="text-sm dark:text-violet-400">x3</span>
 			</h3>
@@ -37,10 +62,10 @@ function My_cart(){
 				<span className="block">$4.00</span>
 				<span className="text-sm dark:text-gray-400">à $2.00</span>
 			</div>
-		</li>
+		</li> */}
 	</ul>
 	<div className="pt-4 space-y-2">
-		<div>
+		{/* <div>
 			<div className="flex justify-between">
 				<span>Subtotal</span>
 				<span>$21.50</span>
@@ -52,14 +77,14 @@ function My_cart(){
 				</svg>
 				<span className="dark:text-gray-400">Spend $20.00, get 20% off</span>
 			</div>
-		</div>
-		<div className="flex justify-between">
+		</div> */}
+		{/* <div className="flex justify-between">
 			<span>Discount</span>
 			<span>-$4.30</span>
-		</div>
+		</div> */}
 	</div>
 	<div className="pt-4 space-y-2">
-		<div className="flex justify-between">
+		{/* <div className="flex justify-between">
 			<span>Service fee</span>
 			<span>$0.50</span>
 		</div>
@@ -69,13 +94,13 @@ function My_cart(){
 				<span>$4.00</span>
 			</div>
 			<a rel="noopener noreferrer" href="#" className="text-xs hover:underline dark:text-violet-400">How do our fees work?</a>
-		</div>
+		</div> */}
 		<div className="space-y-6">
 			<div className="flex justify-between">
 				<span>Total</span>
-				<span className="font-semibold">$22.70</span>
+				<span className="font-semibold">PKR {total}</span>
 			</div>
-			<button type="button" className="w-full py-2 font-semibold border rounded dark:bg-violet-400 dark:text-gray-900 dark:border-violet-400">Go to checkout</button>
+			<button type="button" className="w-full py-2 font-semibold border rounded bg-violet-200 dark:text-gray-900 border-violet-400">Go to checkout</button>
 		</div>
 	</div>
 </div>
